@@ -19,7 +19,7 @@ body {
 nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   padding-top: 45px;
   padding-left: 10%;
   padding-right: 10%;
@@ -64,6 +64,7 @@ nav ul li:hover::after {
 }
 
 .btn {
+  justify-content: right;
   background-color: #f9004d;
   color: white;
   text-decoration: none;
@@ -179,7 +180,7 @@ h4 {
 }
 
 .about p {
-  color: #fcfc;
+  color: whitesmoke;
   letter-spacing: 1px;
   line-height: 28px;
   font-size: 18px;
@@ -213,7 +214,7 @@ button {
   font-size: 75px;
   width: 1130px;
   margin: 30px auto;
-  padding: 4% 10%;
+  padding: 4% 3%;
 }
 
 .box {
