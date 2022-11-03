@@ -54,7 +54,7 @@ nav ul li::after {
   display: block;
   width: 0%;
   height: 2px;
-  background-color: white;
+  background-color: #f9004d;
   margin: auto;
   transition: .4s;
 }
@@ -139,53 +139,159 @@ h4 {
   right: 6px;
 }
 
-.about {
-  width: 100%;
-  padding: 4% 10%;
 
+// ---- about ------ //
+
+#about {
+  padding: 4% 10%;
+  color: white;
 }
 
-.about img {
-  height: auto;
-  width: 380px;
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img{
+  width: 100%;
   border-radius: 20px;
 }
 
-.about-text {
-  width: 550px;
+.about-col-2 {
+  flex-basis: 60%;
 }
 
-.main {
-  width: 1130px;
-  max-width: 95%;
-  // margin: 0 auto;
+.sub-title {
+  font-size: 60px;
+  color: white;
+}
+
+.tab-titles {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin: 20px 0 40px;
+  margin-bottom: auto;
 }
 
-.about h2 {
-  color: white;
-  font-size: 75px;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-}
-
-.about h5 {
-  color: white;
-  letter-spacing: 2px;
-  font-size: 22px;
-  margin-bottom: 25px;
-  text-transform: capitalize;
-}
-
-.about p {
-  color: whitesmoke;
-  letter-spacing: 1px;
-  line-height: 28px;
+.tab-links {
+  margin: 50px;
   font-size: 18px;
-  margin-bottom: 45px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
 }
+
+.tab-links::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  background-color: #f9004d;
+  margin: auto;
+  transition: .4s;
+}
+
+.tab-links.active-link::after {
+  width: 100%;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 10px 2px;
+}
+
+.tab-contents ul li span {
+  color:  #f9004d;
+  padding-bottom: 20px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+#project {
+  padding: 50px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+
+
+
+// .about {
+//   width: 100%;
+//   padding: 4% 10%;
+
+// }
+
+// .about img {
+//   height: auto;
+//   width: 380px;
+//   border-radius: 20px;
+// }
+
+// .about-text {
+//   width: 550px;
+// }
+
+// .main {
+//   width: 1130px;
+//   max-width: 95%;
+//   // margin: 0 auto;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .about h2 {
+//   color: white;
+//   font-size: 75px;
+//   text-transform: capitalize;
+//   margin-bottom: 20px;
+// }
+
+// .about h5 {
+//   color: white;
+//   letter-spacing: 2px;
+//   font-size: 22px;
+//   margin-bottom: 25px;
+//   text-transform: capitalize;
+// }
+
+// .about p {
+//   color: whitesmoke;
+//   letter-spacing: 1px;
+//   line-height: 28px;
+//   font-size: 18px;
+//   margin-bottom: 45px;
+// }
 
 button {
   background-color: #f9004d;
@@ -203,11 +309,11 @@ button {
   }
 }
 
-.projects {
+// .projects {
 
-  width: 100%;
-  padding: 100px 0px;
-}
+//   width: 100%;
+//   padding: 100px 0px;
+// }
 
 .title h2 {
   color: white;
@@ -225,9 +331,9 @@ button {
 }
 
 .card {
-  height: 365px;
-  width: 335px;
-  padding: 20px 35px;
+  height: 420px;
+  width: 606px;
+  padding: 15px 15px;
   background: #141414;
   border-radius: 20px;
   margin: 15px;
@@ -236,12 +342,8 @@ button {
   text-align: center;
 }
 
-.card i {
-  font-size: 50px;
-  display: block;
-  text-align: center;
-  margin: 25px 0px;
-  color: #f9004d;
+.card img {
+  max-height: 380px;
 }
 
 .contact-me {

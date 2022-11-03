@@ -24,62 +24,96 @@
 </div>
   <!-----About section------>
 
-  <section class="about" id="about">
-    <div class="main">
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <%= image_tag("testimg1.jpg", :alt => "This is me") %>
+      </div>
 
-      <div class="about-text">
-        <h2>About me</h2>
-        <h5>Developer & UX Designer</h5>
+      <div class="about-col-2">
+        <h2 class="sub-title">About me</h2>
         <p>Born in 1988 in Murcia, Spain. After several years working early childcare in Switzerland,
         as a English & Kindergarten teacher. Decided to pursue a new career, found in Web Design
         a new passion and here I am, finding a way to express myself in this new world</p>
-        <a href="./resume.pdf" download><button type="button">Download my CV</button></a>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UX / UI</span><br>Designer</li>
+            <li><span>Web Development</span><br>Ruby on Rails <br>HTML <br>CSS <br> JavaScript</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2020 - 2022</span><br>Kindergarten Teacher - Primary School Engelberg</li>
+            <li><span>2018 - 2020</span><br>English Teacher</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2022</span><br>Web Development Bootcamp at Le Wagon</li>
+            <li><span>2012</span><br>Elementary Teacher - Sports at Univ. Almería</li>
+          </ul>
+        </div>
       </div>
-
-
-      <%= image_tag("testimg1.jpg", :alt => "This is me") %>
-
     </div>
-  </section>
+  </div>
+</div>
+  <!-----javascript------>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 
   <!-----project section start------>
 <div class="project" id="project">
-
-  <div class="title">
-    <h2>My projects</h2>
-  </div>
-
-  <div class="box">
-    <div class="card">
-      <i class="fas fa-bars"></i>
-      <h5>Web Development</h5>
-      <div class="pra">
-        <p>What I offer // maybe my skills with logos??</p>
-        <p style="text-align: center; ">
-          <a clas="button" href="#">Read more</a>
-        </p>
+  <div class="container">
+    <h2 class="sub-title">My projects</h2>
+    <div class="work-list">
+      <div class="work">
+        <%= image_tag("rentallthumbnail.png", :class => "img", :alt => "rentall") %>
+        <div class="layer">
+          <h3>Rentall project</h3>
+          <p>1 week project during Le Wagon Bootcamp, we created an Marketplace for renting all type of articles</p>
+          <a href=""><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <%= image_tag("travelmapthumbnail.png", :class => "img", :alt => "travelmap") %>
+        <div class="layer">
+          <h3>TravelMap project</h3>
+          <p>2 weeks project during Le Wagon Bootcamp, I can't emphatise how much work we put into this </p>
+          <a href=""><i class="fas fa-external-link-alt"></i></a>
+        </div>
       </div>
     </div>
-
-    <div class="card">
-      <i class="fas fa-bars"></i>
-      <h5>Web Development</h5>
-      <div class="pra">
-        <p>What I offer // maybe my skills with logos??</p>
-        <p style="text-align: center; ">
-          <a clas="button" href="#">Read more</a>
-        </p>
-    </div>
-
   </div>
 </div>
 
   <!-----contact me section start------>
 
-<%# <div class="contact-me">
-  <p>Let me get you a beatiful website</p>
-  <a href="#" class="button-two">Hire me</a>
-</div> %>
+<div class="contact-me">
+  <%# <p>Let me get you a beatiful website</p> %>
+  <a href="./resume.pdf" download><button type="button">Download my CV</button></a>
+</div>
 
   <!-----footer section start------>
 
